@@ -1,0 +1,128 @@
+.timetable {
+    position: relative;
+    width: 1500px;
+    height: 800px;
+    overflow: hidden;
+    overflow-y: scroll;
+    margin: auto;
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,.1);
+}
+.timetable-time-block {
+    position: fixed;
+    width: 1500px;
+    height: 50px;
+    z-index: 1;
+    box-shadow: 0 0 1px 1px #eaeaea;
+}
+.timetable-blank {
+    display: inline-block;
+    width: calc(4% - 1px);
+    height: 50px;
+    background-color: white;
+    margin: 0 1px 1px 0px;
+    box-shadow: 0 0 1px 1px #eaeaea;
+}
+.timetable-time-block ul {
+    float: right;
+    width: calc(100% - 4% - 2px);
+}
+.timetable-time-block ul li {
+    float: left;
+    width: calc((100%)/13 - 1px);
+    background-color: white;
+    height: 50px;
+    margin: 0 1px 1px 0px;
+    font-size: 15px;
+    box-shadow: 0 0 1px 1px #eaeaea;
+}
+.timetable-time-block ul li span {
+    position: absolute;
+    display: block;
+    width: 1px;
+    margin-left: -1px;
+    height: 5000px;
+    background-color: #f0f0f0;
+}
+.timetable-time-block ul li p {
+    text-align: center;
+    margin-top: 15px;
+}
+.timetable-timeline {
+    margin-top: 51px;
+}
+.timetable-day {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin: 0 0 1px 0;
+    box-shadow: 0 0 1px 1px #f0f0f0;
+}
+.timetable-day:nth-of-type(2n) .timetable-day-name {
+    background-color: #f5f5f5;
+}
+.timetable-day-name {
+    position: absolute;
+    float: left;
+    vertical-align: top;
+    width: calc(4% - 1px);
+    height: 100%;
+    background-color: white;
+    margin: 0 1px 1px 0px;
+}
+.timetable-day-name p {
+    display: block;
+    min-width: 100px;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(50%) rotate(-90deg);
+    display: block;
+    transform-origin: center center 0;
+    text-align: center;
+}
+.timetable-layout {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: calc(100% - 4%);
+}
+.timetable-layout-block {
+    position: absolute;
+    height: 100%;
+    background: repeating-linear-gradient(-60deg, #f0f0f0 0, #e0e0e0 0.05px, transparent 1px, transparent 3px);
+}
+.timetable-day-task-block {
+    float: right;
+    height: 60px;
+    margin: 0 1px 0px 0px;
+    /*Расположение*/
+    width: calc(100% - 4% - 1px);
+}
+.timetable-day-task {
+    box-sizing: border-box;
+    position: relative;
+    background-color: rgba(0, 255, 0, 0.3);
+    height: 55px;
+    margin: 2.5px 0;
+    width: calc((100%/13)*2 - 1px);
+    margin-left: calc((100%/13)*0);
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 255, 0.3);
+    padding: 5px;
+}
+.timetable-day-task h4 {
+    font-size: 12px;
+}
+.timetable-day-task p {
+    font-weight: 100;
+    font-size: 10px;
+}
+.timetable-day-task .time {
+    position: absolute;
+    width: 50px;
+    top: 10px;
+    right: 5px;
+}
